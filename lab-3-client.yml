@@ -1,13 +1,11 @@
 ---
 spring:
+  profiles:
+    active: northamerica
+  application:
+    name: lab-3-client
   cloud:
     config:
-      server:
-        git:
-          uri: https://github.com/arriaga
-          searchPaths: ConfigData
-        # "native" is used when the native profile is active, for local tests with a classpath repo:
-        native:
-          searchLocations: classpath:offline-repository/
+      uri: http://localhost:8001
 server:
-  port: 8001
+  port: 8002
